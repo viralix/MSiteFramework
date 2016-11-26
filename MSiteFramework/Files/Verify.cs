@@ -10,8 +10,7 @@ namespace MSiteFramework.Files
 
             bool Allow = false;
 
-            string id = server.Get("code");
-
+            string id = server.Get("domain");
 
 
             Element[] head = {

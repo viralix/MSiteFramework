@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSiteFramework", "MSiteFram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSiteDLL", "MSiteDLL\MSiteDLL.csproj", "{E9587C14-25B1-487B-9984-30ABF3A4230D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Verify", "Verify\Verify.csproj", "{FD3E0079-0FD8-4B03-B363-33E57B5271EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
