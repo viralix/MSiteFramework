@@ -47,8 +47,29 @@ namespace MSiteFramework.Files
         private static bool check(string ip)
         {
             string contents;
-            using (var wc = new System.Net.WebClient())
-                contents = wc.DownloadString("http");
+            try
+            {
+                using (var wc = new System.Net.WebClient())
+                    contents = wc.DownloadString("https://raw.githubusercontent.com/mihail-rotmg/MSiteFramework/master/Verify/list");
+                string[] lines = contents.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                foreach (string line in lines)
+                {
+                    if (line.Split('=')[0] == ip)
+                    {
+                        bool x, y;
+                        y = bool.TryParse(line.Split('=')[1],out x);
+                        if (x!=y)
+                        {
+                            return false;
+                        } else
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            catch (Exception) { return false; }
         }
     }
 }
