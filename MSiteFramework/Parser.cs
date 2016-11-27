@@ -40,7 +40,6 @@ namespace MSiteFramework
                 }
                 else
                 {
-                    string[] lists = _list.Split(',');
                     Block body = Prs("body", file, site), head = Prs("head", file, site);
                     Block[] blocks = {
                         head,

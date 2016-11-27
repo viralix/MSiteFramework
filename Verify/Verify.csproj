@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -48,33 +48,37 @@
     </None>
     <Compile Include="Verify.cs" />
     <Compile Include="VerifyHandle.cs" />
+    <Compile Include="AddVerify.cs" />
+    <None Include="Examples\script\index.html">
+      <LogicalName>Verify.Examples.info.index.html</LogicalName>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="list">
       <CustomToolNamespace>Verify</CustomToolNamespace>
     </EmbeddedResource>
+    <EmbeddedResource Include="Examples\info\index.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="html\verify\handle.m">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>handle.m</LogicalName>
     </None>
     <EmbeddedResource Include="html\verify\verify.m">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>verify.m</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="html\verify\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>index.html</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="config.m">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\info\index.html" />
-    <EmbeddedResource Include="Examples\script\index.html" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\info\info.mc" />
@@ -86,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSiteDLL\MSiteDLL.csproj">
-      <Project>{e9587c14-25b1-487b-9984-30abf3a4230d}</Project>
+      <Project>{E9587C14-25B1-487B-9984-30ABF3A4230D}</Project>
       <Name>MSiteDLL</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,15 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSiteDLL\MSiteDLL.csproj">
-      <Project>{e9587c14-25b1-487b-9984-30abf3a4230d}</Project>
+      <Project>{E9587C14-25B1-487B-9984-30ABF3A4230D}</Project>
       <Name>MSiteDLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
-      <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
+      <Project>{9E139539-C272-488A-BFCF-CADDF458DF9D}</Project>
       <Name>SimpleHttpServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Verify\Verify.csproj">
-      <Project>{fd3e0079-0fd8-4b03-b363-33e57b5271eb}</Project>
+      <Project>{FD3E0079-0FD8-4B03-B363-33E57B5271EB}</Project>
       <Name>Verify</Name>
     </ProjectReference>
   </ItemGroup>

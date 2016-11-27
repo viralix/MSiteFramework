@@ -61,6 +61,8 @@ namespace MSiteFramework
             Console.WriteLine("Listening on port {0}...", Port);
             Console.ResetColor();
             Thread thread = new Thread(new ThreadStart(StartServer));
+			if (verified.ToLower() != "true")
+				Verify.AddVerify.Ver ("http://localhost:"+Port.ToString()+"/verify/");
             thread.Start();
         }
 

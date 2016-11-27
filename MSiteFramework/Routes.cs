@@ -74,7 +74,8 @@ namespace MSiteFramework
                 {
                     if (File.Exists(url))
                     {
-                        Site.Write(File.ReadAllText(url));
+                        ret[2] = "300";
+                        Site.Reset();
                     } else
                     {
                         if(Directory.Exists(url))
@@ -82,7 +83,7 @@ namespace MSiteFramework
                             if(File.Exists(url  + "/" + Program.Index))
                             {
                                 ret[2] = "200";
-                                Site.Write(File.ReadAllText(url + "/" + Program.Index));
+                                Site.Write(File.ReadAllText(url  + "/" + Program.Index));
                             } else
                             {
                                 ret[2] = "200";
@@ -123,7 +124,13 @@ namespace MSiteFramework
              y.post = request.Content;
              x.Headers["Content-Type"] = SimpleHttpServer.RouteHandlers.QuickMimeTypeMapper.GetMimeType(Path.GetExtension(y.Location(Program.Host)));
             string[] z = Handle(y);
-            x.ContentAsUTF8 = z[0];
+            if (z[2] == "300")
+            {
+                x.Content = File.ReadAllBytes(y.Location(Program.Host));
+                z[2] = "200";
+            } else {
+                x.ContentAsUTF8 = z[0];
+            }
             x.ReasonPhrase = z[1];
             x.StatusCode = z[2];
             return x;
