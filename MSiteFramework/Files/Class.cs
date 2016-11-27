@@ -20,7 +20,12 @@ namespace MSiteFramework.Files
         }
         public Document Verify()
         {
-            return Files.Verify.Generate(site);
+            return Secure.Verify.Files.Verify.Generate(site);
+        }
+        public Document VerifyHandle()
+        {
+            return Secure.Verify.Files.VerifyHandle.Generate(site);
+
         }
     }
 }

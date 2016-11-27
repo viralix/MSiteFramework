@@ -43,6 +43,11 @@
   <ItemGroup>
     <Compile Include="Info.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="verified">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Verify.cs" />
+    <Compile Include="VerifyHandle.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="list">
@@ -50,9 +55,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="html\verify\handle.mc">
+    <None Include="html\verify\handle.m">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="html\verify\verify.m">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -67,7 +72,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Examples\info\index.html" />
     <EmbeddedResource Include="Examples\script\index.html" />
@@ -79,6 +83,12 @@
     <EmbeddedResource Include="Examples\script\script.mc" />
     <EmbeddedResource Include="Examples\script\script.mc.dlls" />
     <EmbeddedResource Include="Examples\script\script.mc.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MSiteDLL\MSiteDLL.csproj">
+      <Project>{e9587c14-25b1-487b-9984-30abf3a4230d}</Project>
+      <Name>MSiteDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

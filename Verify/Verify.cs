@@ -1,12 +1,11 @@
 ﻿using MSiteDLL;
 using System;
-using Secure.Verify;
 
-namespace MSiteFramework.Files
+namespace Secure.Verify.Files
 {
-    internal class Verify
+    public class Verify
     {
-        internal static Document Generate(Data server)
+        public static Document Generate(Data server)
         {
 
             bool Allow = false;

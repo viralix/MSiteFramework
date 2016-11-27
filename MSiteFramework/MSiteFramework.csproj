@@ -47,7 +47,6 @@
     <Compile Include="Files\Class.cs" />
     <Compile Include="Files\Error.cs" />
     <Compile Include="Files\List.cs" />
-    <Compile Include="Files\Verify.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

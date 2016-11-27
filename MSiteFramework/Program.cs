@@ -2,6 +2,7 @@
 using SimpleHttpServer;
 using System.Threading;
 using MSiteDLL;
+using System.IO;
 
 namespace MSiteFramework
 {
@@ -12,10 +13,15 @@ namespace MSiteFramework
         public static int Port;
         public static string name = "MSiteFramework";
         public static string version = "1.0.0";
+        public static string verified = "null";
         public static int MaxCrash;
 
         public static void Main(string[] args)
         {
+            try
+            {
+                verified = File.ReadAllText("verified");
+            } catch (Exception){}
             MaxCrash = 50;
             Port = 80;
             Index = "index.html";
@@ -25,6 +31,7 @@ namespace MSiteFramework
             {
                 file = args[0];
             } catch (Exception) {}
+            Console.Title =  name+" Server"+lc(verified, version);
             try
             {
                 Host = Prop.Get(file, "html");
@@ -37,12 +44,37 @@ namespace MSiteFramework
                 Console.WriteLine("Error while trying to open config file: {0}", e.Message);
                 Console.ResetColor();
             }
+            if (verified.ToLower() != "true")
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Your server is not verified.");
+                Console.WriteLine("Please go to: http://localhost:{0}/verify/", Port);
+                Console.ResetColor();
+            } else
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("{0} v{1}",name,version);
+                Console.WriteLine();
+                Console.ResetColor();
+            }
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Listening on port {0}...", Port);
             Console.ResetColor();
             Thread thread = new Thread(new ThreadStart(StartServer));
             thread.Start();
         }
+
+        private static string lc(string verified, string version)
+        {
+            if (verified.ToLower() == "true")
+            {
+                return " v"+version;
+            } else
+            {
+                return " (NOT VERIFIED)";
+            }
+        }
+
         public static void StartServer()
         {
             int i = 0;
