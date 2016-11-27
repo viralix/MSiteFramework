@@ -48,12 +48,6 @@
     <Compile Include="Prop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
-      <Project>{9E139539-C272-488A-BFCF-CADDF458DF9D}</Project>
-      <Name>SimpleHttpServer</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -62,4 +56,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
+      <Project>{9E139539-C272-488A-BFCF-CADDF458DF9D}</Project>
+      <Name>SimpleHttpServer</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
