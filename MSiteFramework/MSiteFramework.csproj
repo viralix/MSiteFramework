@@ -34,10 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SimpleHttpServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\SimpleHttpServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Files\Class.cs" />
     <Compile Include="Files\Error.cs" />
+    <Compile Include="Files\List.cs" />
     <Compile Include="Files\Verify.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
@@ -64,6 +61,14 @@
     <ProjectReference Include="..\MSiteDLL\MSiteDLL.csproj">
       <Project>{e9587c14-25b1-487b-9984-30abf3a4230d}</Project>
       <Name>MSiteDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
+      <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
+      <Name>SimpleHttpServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Verify\Verify.csproj">
+      <Project>{fd3e0079-0fd8-4b03-b363-33e57b5271eb}</Project>
+      <Name>Verify</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

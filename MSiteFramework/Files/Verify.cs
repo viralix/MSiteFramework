@@ -1,5 +1,6 @@
 ﻿using MSiteDLL;
 using System;
+using Secure.Verify;
 
 namespace MSiteFramework.Files
 {
@@ -30,12 +31,11 @@ namespace MSiteFramework.Files
             }
 
             Element[] head = {
-                new Element("version", Program.version),
-                new Element("name", Program.name),
+                new Element("title","Verification"),
             };
 
             Element[] body = {
-                new Element("licensed", Allow.ToString()),
+                new Element("div", Allow.ToString(), "id=licensed style=\"display: none; \""),
             };
             Block[] blocks = {
                     new Block("head", head),
@@ -69,7 +69,30 @@ namespace MSiteFramework.Files
                 }
                 return false;
             }
-            catch (Exception) { return false; }
+            catch (Exception) {
+                try
+                {
+                    contents = Info.Load();
+                    string[] lines = contents.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                    foreach (string line in lines)
+                    {
+                        if (line.Split('=')[0] == ip)
+                        {
+                            bool x, y;
+                            y = bool.TryParse(line.Split('=')[1], out x);
+                            if (x != y)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                } catch (Exception) { return false; }
+            }
         }
     }
 }

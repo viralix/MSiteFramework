@@ -34,7 +34,6 @@ namespace MSiteFramework
 
         public static string[] Handle(Data server)
         {
-            Site.Reset();
             string[] ret = new string[3];
             ret[0] = "";
             ret[1] = "OK";
@@ -82,13 +81,17 @@ namespace MSiteFramework
                         {
                             if(File.Exists(url  + "/" + Program.Index))
                             {
+                                ret[2] = "200";
                                 Site.Write(File.ReadAllText(url + "/" + Program.Index));
                             } else
                             {
-                                throw (new Exception("NOT FOUND"));
+                                ret[2] = "200";
+                                Document doc = Files.List.Generate(server);
+                                doc.Write();
                             }
                         } else
                         {
+                            ret[2] = "404";
                             throw (new Exception("NOT FOUND"));
                         }
                     }
@@ -107,24 +110,23 @@ namespace MSiteFramework
                     }
                 }
             }
+            Site.Reset();
             return ret;
         }
 
          private static HttpResponse Handle(HttpRequest request)
          {
-             HttpResponse x;
+            HttpResponse x = new HttpResponse();
              Data y = new Data(request);
              y.SetGet(request.Url);
              y.hasData = true;
              y.post = request.Content;
-             string[] z = Handle(y);
-             x = new HttpResponse()
-             {
-                 ContentAsUTF8 = z[0],
-                 ReasonPhrase = z[1],
-                 StatusCode = z[2]
-             };
-             return x;
+             x.Headers["Content-Type"] = SimpleHttpServer.RouteHandlers.QuickMimeTypeMapper.GetMimeType(Path.GetExtension(y.Location(Program.Host)));
+            string[] z = Handle(y);
+            x.ContentAsUTF8 = z[0];
+            x.ReasonPhrase = z[1];
+            x.StatusCode = z[2];
+            return x;
          }
     }
 }

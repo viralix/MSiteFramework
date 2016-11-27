@@ -10,6 +10,10 @@ namespace MSiteFramework.Files
         {
             site = Site;
         }
+        public Document List()
+        {
+            return Files.List.Generate(site);
+        }
         public Document Error()
         {
             return Files.Error.Generate(new System.Exception("Forced error."), false);

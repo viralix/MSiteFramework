@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Verify")]
-[assembly: AssemblyDescription("Verification Storage")]
+[assembly: AssemblyTitle("SimpleHttpServer")]
+[assembly: AssemblyDescription("SimpleHttpServer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Mihail Mojsoski")]
-[assembly: AssemblyProduct("MSite Framework")]
-[assembly: AssemblyCopyright("Copyright © Mihail Mojsoski 2016")]
+[assembly: AssemblyCompany("jeske")]
+[assembly: AssemblyProduct("SimpleHttpServer")]
+[assembly: AssemblyCopyright("This is free and unencumbered software released into the public domain.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fd3e0079-0fd8-4b03-b363-33e57b5271eb")]
+[assembly: Guid("eaaa7f54-44a1-45d4-8d71-1782a8ba5eb7")]
 
 // Version information for an assembly consists of the following four values:
 //

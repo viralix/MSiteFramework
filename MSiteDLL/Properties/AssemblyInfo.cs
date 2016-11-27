@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MSiteDLL")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("MSiteDLL")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MSiteDLL")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCompany("Mihail Mojsoski")]
+[assembly: AssemblyProduct("MSite Framework")]
+[assembly: AssemblyCopyright("Copyright © Mihail Mojsoski 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

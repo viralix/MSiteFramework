@@ -33,9 +33,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SimpleHttpServer">
-      <HintPath>..\MSiteFramework\bin\SimpleHttpServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +47,12 @@
     <Compile Include="HTMLSite.cs" />
     <Compile Include="Prop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
+      <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
+      <Name>SimpleHttpServer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
