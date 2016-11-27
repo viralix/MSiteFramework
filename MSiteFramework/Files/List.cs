@@ -4,9 +4,12 @@ namespace MSiteFramework.Files
 {
     public static class List
     {
-
         public static Document Generate(Data server)
         {
+            if (Program.allowIndex != "true")
+            {
+                return Error.Generate(new System.Exception("NOT FOUND"), false);
+            }
             string[] y,z;
             string x = "",loc = server.Location(Program.Host);
             string url = server.request.Url;

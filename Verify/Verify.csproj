@@ -48,7 +48,6 @@
     </None>
     <Compile Include="Verify.cs" />
     <Compile Include="VerifyHandle.cs" />
-    <Compile Include="AddVerify.cs" />
     <None Include="Examples\script\index.html">
       <LogicalName>Verify.Examples.info.index.html</LogicalName>
     </None>

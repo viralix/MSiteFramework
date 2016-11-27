@@ -18,8 +18,6 @@ namespace SimpleHttpServer
 
         #region Fields
 
-        private static int MAX_POST_SIZE = 10 * 1024 * 1024; // 10MB
-
         private List<Route> Routes = new List<Route>();
 
         private static readonly ILog log = LogManager.GetLogger(typeof(HttpProcessor));
@@ -42,11 +40,16 @@ namespace SimpleHttpServer
                 HttpRequest request = GetRequest(inputStream, outputStream);
 
                 // route and handle the request...
-                HttpResponse response = RouteRequest(inputStream, outputStream, request);      
-          
-                Console.WriteLine("{0} {1}",response.StatusCode,request.Url);
-                // build a default response for errors
-                if (response.Content == null) {
+                HttpResponse response = RouteRequest(inputStream, outputStream, request);
+
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write("["+response.StatusCode+"] ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write(request.Url);
+            Console.ResetColor();
+            Console.WriteLine();
+            // build a default response for errors
+            if (response.Content == null) {
                     if (response.StatusCode != "200") {
                         response.ContentAsUTF8 = string.Format("{0} {1} <p> {2}", response.StatusCode, request.Url, response.ReasonPhrase);
                     }

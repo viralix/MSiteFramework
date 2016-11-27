@@ -9,8 +9,9 @@ namespace Secure.Verify.Files
         public static Document Generate(Data server)
         {
             Element[] head = {
-    new Element("title", "Results"),
-};
+             new Element("title", "Results"),
+             null,
+            };
             string content, subc, id = "";
             try
             {
@@ -31,11 +32,19 @@ namespace Secure.Verify.Files
                     try
                     {
                         Directory.Delete(server.Location("html").Replace("handle.m", ""), true);
+                        head[1] = new Element("meta", "", "http-equiv=\"refresh\" content=\"3;URL='../'\"");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Verified successfully, please restart the server.");
+                        Console.ResetColor();
                     }
                     catch (Exception)
                     {
                         subc = "This server has been verified.</p><p>The product has been verified, feel free to delete the /html/verify/ folder.</p>";
-                        File.WriteAllText("verified", "true");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Verified successfully!");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Please delete the /html/verify folder and restart the server.");
+                        Console.ResetColor();
                     }
 
                 }

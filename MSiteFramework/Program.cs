@@ -15,6 +15,7 @@ namespace MSiteFramework
         public static string version = "1.0.0";
         public static string verified = "null";
         public static int MaxCrash;
+        public static string allowIndex = "true";
 
         public static void Main(string[] args)
         {
@@ -38,6 +39,7 @@ namespace MSiteFramework
                 Port = int.Parse(Prop.Get(file, "port"));
                 Index = Prop.Get(file, "index");
                 MaxCrash = int.Parse(Prop.Get(file, "crash"));
+                allowIndex = Prop.Get(file, "dirlist");
 
             } catch (Exception e) {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -62,7 +64,7 @@ namespace MSiteFramework
             Console.ResetColor();
             Thread thread = new Thread(new ThreadStart(StartServer));
 			if (verified.ToLower() != "true")
-				Verify.AddVerify.Ver ("http://localhost:"+Port.ToString()+"/verify/");
+                System.Diagnostics.Process.Start("http://localhost:"+Port.ToString()+"/verify/");
             thread.Start();
         }
 
@@ -82,7 +84,7 @@ namespace MSiteFramework
             int i = 0;
             HttpServer httpServer = new HttpServer(Port, Routes.GET);
             Start:
-            if((i>=MaxCrash) || (MaxCrash==-1))
+            if((i>=MaxCrash) && (MaxCrash!=-1))
             {
                 Console.BackgroundColor = ConsoleColor.Red;
                 Console.ForegroundColor = ConsoleColor.White;

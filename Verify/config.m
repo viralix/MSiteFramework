@@ -1,11 +1,19 @@
 % HTML FOLDER LOCATION
 html~html
+% DEFAULT: html
 
 % HOST AT PORT
 port~80
+% DEFAULT: 80
 
 % INDEX FILE
 index~/index.html
+% DEFAULT: /index.html
 
 % ALLOWED CRASHES
-crash~99
+crash~-1
+% DEFAULT: 50 (-1 to disable)
+
+% ALLOW DIRECTORY LIST
+dirlist~true
+% DEFAULT: FALSE
