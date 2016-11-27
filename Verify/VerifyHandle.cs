@@ -10,7 +10,7 @@ namespace Secure.Verify.Files
         {
             Element[] head = {
              new Element("title", "Results"),
-             null,
+             new Element("meta",""),
             };
             string content, subc, id = "";
             try
