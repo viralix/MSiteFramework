@@ -1,0 +1,7 @@
+/home/mihail/Documents/MSiteFramework/MSiteDLL/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/MSiteDLL.dll.mdb
+/home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/MSiteDLL.dll
+/home/mihail/Documents/MSiteFramework/MSiteDLL/obj/Debug/MSiteDLL.dll
+/home/mihail/Documents/MSiteFramework/MSiteDLL/obj/Debug/MSiteDLL.dll.mdb
+/home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/SimpleHttpServer.dll
+/home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/log4net.dll

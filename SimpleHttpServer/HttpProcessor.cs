@@ -181,7 +181,6 @@ namespace SimpleHttpServer
             }
             string method = tokens[0].ToUpper();
             string url = tokens[1];
-            string protocolVersion = tokens[2];
 
             //Read Headers
             Dictionary<string, string> headers = new Dictionary<string, string>();

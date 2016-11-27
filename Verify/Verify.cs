@@ -12,6 +12,10 @@ namespace Secure.Verify.Files
 
             string id = server.Get("host");
 
+            if (id != Prop.Get("config.m","hostname"))
+            {
+                Allow = false;
+            } else {
             try
             {
                 string[] ips = DNS.Resolve(id);
@@ -28,7 +32,7 @@ namespace Secure.Verify.Files
             {
                 Allow = false;
             }
-
+            }
             Element[] head = {
                 new Element("title","Verification"),
             };

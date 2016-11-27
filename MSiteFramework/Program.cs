@@ -8,6 +8,7 @@ namespace MSiteFramework
 {
     public static class Program
     {
+        public static string Hostname;
         public static string Index;
         public static string Host;
         public static int Port;
@@ -19,15 +20,19 @@ namespace MSiteFramework
 
         public static void Main(string[] args)
         {
-            try
-            {
-                verified = File.ReadAllText("verified");
-            } catch (Exception){}
+            Hostname = "localhost";
             MaxCrash = 50;
             Port = 80;
             Index = "index.html";
             Host = "html";
+
             string file = "config.m";
+
+            try
+            {
+                verified = File.ReadAllText("verified");
+            } catch (Exception){}
+
             try
             {
                 file = args[0];
@@ -40,6 +45,7 @@ namespace MSiteFramework
                 Index = Prop.Get(file, "index");
                 MaxCrash = int.Parse(Prop.Get(file, "crash"));
                 allowIndex = Prop.Get(file, "dirlist");
+                Hostname = Prop.Get(file, "hostname");
 
             } catch (Exception e) {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -50,7 +56,7 @@ namespace MSiteFramework
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Your server is not verified.");
-                Console.WriteLine("Please go to: http://localhost:{0}/verify/", Port);
+                Console.WriteLine("Please go to: http://"+Hostname+":{0}/verify/", Port);
                 Console.ResetColor();
             } else
             {
@@ -64,7 +70,7 @@ namespace MSiteFramework
             Console.ResetColor();
             Thread thread = new Thread(new ThreadStart(StartServer));
 			if (verified.ToLower() != "true")
-                System.Diagnostics.Process.Start("http://localhost:"+Port.ToString()+"/verify/");
+                System.Diagnostics.Process.Start("http://"+Hostname+":"+Port.ToString()+"/verify/");
             thread.Start();
         }
 

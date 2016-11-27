@@ -1,0 +1,17 @@
+/home/mihail/Documents/MSiteFramework/MSiteFramework/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/verified
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/html/verify/handle.m
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/html/verify/verify.m
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/html/verify/index.html
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/config.m
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/MSiteFramework.exe.config
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/MSiteFramework.exe.mdb
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/MSiteFramework.exe
+/home/mihail/Documents/MSiteFramework/MSiteFramework/obj/Debug/MSiteFramework.exe
+/home/mihail/Documents/MSiteFramework/MSiteFramework/obj/Debug/MSiteFramework.exe.mdb
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/MSiteDLL.dll
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/MSiteDLL.dll.mdb
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/SimpleHttpServer.dll
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/Verify.dll
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/Verify.dll.mdb
+/home/mihail/Documents/MSiteFramework/MSiteFramework/bin/Debug/log4net.dll
