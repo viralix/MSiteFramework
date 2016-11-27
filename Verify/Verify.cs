@@ -11,8 +11,14 @@ namespace Secure.Verify.Files
             bool Allow = false;
 
             string id = server.Get("host");
-
-            if (id != Prop.Get("config.m","hostname"))
+            string x;
+            try {
+                x = Prop.Get("config.m","hostname");
+            } catch (Exception)
+            {
+                x = "localhost";
+            }
+            if (id != x)
             {
                 Allow = false;
             } else {
