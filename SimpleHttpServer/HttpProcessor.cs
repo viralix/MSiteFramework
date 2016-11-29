@@ -85,7 +85,7 @@ namespace SimpleHttpServer
             try {
             stream.Write(response.Content, 0, response.Content.Length);
             }
-            catch (Exception) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Lagged, too heavy work or ddos?"); Console.ResetColor(); };
+            catch (Exception) { Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("Dropped connection."); Console.ResetColor(); };
 
         }
 
@@ -119,7 +119,7 @@ namespace SimpleHttpServer
             try
             {
                 stream.Write(bytes, 0, bytes.Length);
-            } catch (Exception) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Lagged, too heavy work or ddos?"); Console.ResetColor(); };
+            } catch (Exception) { Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("Dropped connection."); Console.ResetColor(); };
         }
 
         protected virtual Stream GetOutputStream(TcpClient tcpClient)

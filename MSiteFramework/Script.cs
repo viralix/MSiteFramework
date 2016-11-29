@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.CSharp;
@@ -74,6 +75,41 @@ namespace SimpleScript
                 ret = File.ReadAllText(file + ".inc");
             }
             return ret;
+        }
+
+        public static string PHPExec(string file)
+        {
+            string ret;
+            if ((!File.Exists(Program.php) && Program.fphp == false) || Program.php == "disable")
+            {
+                ret = "NO PHP";
+            } else {
+                try {
+                    string[] test = UnsafePHP(Program.php, file);
+					ret = test[1] + test[0];
+                } catch(Exception e) {
+                    Console.WriteLine("PHP {e}",e.Message);
+                   ret = "PHP ERROR";
+                }
+            }
+            return ret;
+        }
+
+        private static string[] UnsafePHP(string php, string file)
+        {
+            Process process = new Process();
+            string[] ret = new string[2];
+            process.StartInfo.FileName = php;
+            process.StartInfo.Arguments = "-f \"" + file + "\"";
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.RedirectStandardError = true;
+            process.Start();
+            ret[0] = process.StandardOutput.ReadToEnd();
+            ret[1] = process.StandardError.ReadToEnd();
+            process.WaitForExit();
+            return ret;
+
         }
         private static string[] DLLs(string file)
         {

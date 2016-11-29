@@ -9,6 +9,9 @@ namespace MSiteFramework
 {
     public static class Program
     {
+
+        public static bool fphp;
+        public static string php;
         public static int Build;
         public static string Hostname;
         public static string Index;
@@ -22,6 +25,8 @@ namespace MSiteFramework
 
         public static void Main(string[] args)
         {
+            fphp = false;
+            php = "disable";
             Hostname = "localhost";
             MaxCrash = 50;
             Port = 80;
@@ -50,6 +55,8 @@ namespace MSiteFramework
                 allowIndex = Prop.Get(file, "dirlist");
                 Hostname = Prop.Get(file, "hostname");
                 Build = int.Parse(Prop.Get(file, "build"));
+                fphp = bool.Parse(Prop.Get(file, "fphp"));
+                php = Prop.Get(file, "php");
 
             } catch (Exception e) {
                 Console.ForegroundColor = ConsoleColor.Red;

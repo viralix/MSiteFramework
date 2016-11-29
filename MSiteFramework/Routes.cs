@@ -123,17 +123,64 @@ namespace MSiteFramework
              y.hasData = true;
              y.post = request.Content;
              x.Headers["Content-Type"] = SimpleHttpServer.RouteHandlers.QuickMimeTypeMapper.GetMimeType(Path.GetExtension(y.Location(Program.Host)));
-            string[] z = Handle(y);
-            if (z[2] == "300")
-            {
-                x.Content = File.ReadAllBytes(y.Location(Program.Host));
-                z[2] = "200";
-            } else {
-                x.ContentAsUTF8 = z[0];
-            }
-            x.ReasonPhrase = z[1];
-            x.StatusCode = z[2];
-            return x;
+			if (request.Url.EndsWith (".php")) {
+				string url = y.Location(Program.Host);
+				string output = "", r = "";
+				try {
+				output = Script.PHPExec(url);
+				} catch (Exception e) {
+					output = "PHP ERROR";
+					r = e.Message;
+				}
+				if (File.Exists(url))
+				{
+					if (!(output == "PHP ERROR") && !(output == "NO PHP"))
+					{
+						x.ContentAsUTF8 = output;
+						x.StatusCode = "OK";
+						x.ReasonPhrase = "200";
+					} else {
+						x.ContentAsUTF8 = @"
+                        <html>
+                        <head>
+                        <title>PHP Execution Error</title>
+                        </head>
+                        <body>
+                        <h1>" + output +@"</h1>
+                        <p>Please fix this issue in order to run PHP files.</p>
+						<p>"+r+@"</p>
+                        </body>
+                        </html>";
+						x.StatusCode = "500";
+						x.ReasonPhrase = "InternalServerError";
+					}
+				} else {
+					x.ContentAsUTF8 = @"
+                        <html>
+                        <head>
+                        <title>File not found.</title>
+                        </head>
+                        <body>
+                        <h1>" + output +@"</h1>
+                        <p>That PHP file was not found.</p>
+                        </body>
+                        </html>";
+					x.StatusCode = "404";
+					x.ReasonPhrase = "NotFound";
+				}
+				return x;
+			} else {
+				string[] z = Handle (y);
+				if (z [2] == "300") {
+					x.Content = File.ReadAllBytes (y.Location (Program.Host));
+					z [2] = "200";
+				} else {
+					x.ContentAsUTF8 = z [0];
+				}
+				x.ReasonPhrase = z [1];
+				x.StatusCode = z [2];
+				return x;
+			}
          }
     }
 }

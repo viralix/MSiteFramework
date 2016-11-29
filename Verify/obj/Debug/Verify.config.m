@@ -2,8 +2,16 @@
 html~html
 % DEFAULT: html
 
+% PHP EXECUTEABLE
+php~disabled
+% ex: c:\php\php.exe | /usr/local/bin/php | disable
+
+% FORCE PHP
+fphp~false
+
 % BUILD NUMBER
-build~2
+build~23
+% DO NOT TOUCH
 
 % HOSTNAME
 hostname~localhost
