@@ -2,12 +2,14 @@
 using SimpleHttpServer;
 using System.Threading;
 using MSiteDLL;
+using Secure.Verify;
 using System.IO;
 
 namespace MSiteFramework
 {
     public static class Program
     {
+        public static int Build;
         public static string Hostname;
         public static string Index;
         public static string Host;
@@ -23,6 +25,7 @@ namespace MSiteFramework
             Hostname = "localhost";
             MaxCrash = 50;
             Port = 80;
+            Build = -1;
             Index = "index.html";
             Host = "html";
 
@@ -46,12 +49,16 @@ namespace MSiteFramework
                 MaxCrash = int.Parse(Prop.Get(file, "crash"));
                 allowIndex = Prop.Get(file, "dirlist");
                 Hostname = Prop.Get(file, "hostname");
+                Build = int.Parse(Prop.Get(file, "build"));
 
             } catch (Exception e) {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error while trying to open config file: {0}", e.Message);
                 Console.ResetColor();
             }
+
+            version = version + ".x["+Build+"]";
+
             if (verified.ToLower() != "true")
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -65,12 +72,25 @@ namespace MSiteFramework
                 Console.WriteLine();
                 Console.ResetColor();
             }
+
+            if (verified.ToLower() == "true")
+            {
+                if (Update.Check(Build))
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("A new update has been found!");
+                    Console.WriteLine("Please go to: https://github.com/mihail-rotmg/MSiteFramework/releases");
+                    Console.ResetColor();
+                } else {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Up to date!");
+                    Console.ResetColor();
+                }
+            }
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Listening on port {0}...", Port);
             Console.ResetColor();
             Thread thread = new Thread(new ThreadStart(StartServer));
-			if (verified.ToLower() != "true")
-                System.Diagnostics.Process.Start("http://"+Hostname+":"+Port.ToString()+"/verify/");
             thread.Start();
         }
 
