@@ -3,7 +3,7 @@ html~html
 % DEFAULT: html
 
 % BUILD NUMBER
-build~2
+build~22
 
 % HOSTNAME
 hostname~localhost
