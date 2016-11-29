@@ -92,26 +92,40 @@ namespace MSiteDLL
             Site.Tag(ID, false);
         }
     }
+    public class Empty : Element
+    {
+        public Empty (string text) : base("", text, "", true)
+        {
+            
+        }
+    }
     public class Element
     {
         string Tag;
         string Text;
         string Args;
-        public Element(string tag, string text, string args = null)
+        bool isEmpty;
+        public Element(string tag, string text, string args = null, bool isse = false)
         {
             Tag = tag;
             Text = text;
             Args = args;
+            isEmpty = isse;
         }
         public void Write()
         {
-            if(Args == null)
+            if (isEmpty == false)
             {
-                Site.Text(Tag, Text);
+               if(Args == null)
+               {
+                    Site.Text(Tag, Text);
+               } else {
+                   Site.Tag(Tag, true, Args);
+                   Site.Write(Text);
+                   Site.Tag(Tag,false);
+                }
             } else {
-                Site.Tag(Tag, true, Args);
                 Site.Write(Text);
-                Site.Tag(Tag,false);
             }
         }
     }
