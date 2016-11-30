@@ -9,7 +9,9 @@ namespace MSiteFramework
 {
     public static class Program
     {
-
+		public static bool cupdate;
+		public static bool uphpsh;
+		public static string phpsh;
         public static bool fphp;
         public static string php;
         public static int Build;
@@ -28,11 +30,14 @@ namespace MSiteFramework
             fphp = false;
             php = "disable";
             Hostname = "localhost";
-            MaxCrash = 50;
+            MaxCrash = 2;
             Port = 80;
             Build = -1;
             Index = "index.html";
             Host = "html";
+			uphpsh = false;
+			phpsh = "php.sh";
+			cupdate = true;
 
             string file = "config.m";
 
@@ -57,6 +62,9 @@ namespace MSiteFramework
                 Build = int.Parse(Prop.Get(file, "build"));
                 fphp = bool.Parse(Prop.Get(file, "fphp"));
                 php = Prop.Get(file, "php");
+				uphpsh = bool.Parse(Prop.Get(file, "uphpsh"));
+				phpsh = Prop.Get(file, "phpsh");
+				cupdate = bool.Parse(Prop.Get(file, "cupdate"));
 
             } catch (Exception e) {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -80,7 +88,7 @@ namespace MSiteFramework
                 Console.ResetColor();
             }
 
-            if (verified.ToLower() == "true")
+			if (verified.ToLower() == "true" && cupdate == true)
             {
                 if (Update.Check(Build))
                 {

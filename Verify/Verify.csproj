@@ -52,6 +52,9 @@
     <None Include="Examples\script\index.html">
       <LogicalName>Verify.Examples.info.index.html</LogicalName>
     </None>
+    <None Include="php.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="list">

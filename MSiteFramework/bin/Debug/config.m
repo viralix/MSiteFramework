@@ -2,15 +2,27 @@
 html~html
 % DEFAULT: html
 
+% UPDATE CHECK
+cupdate~true
+% DEFAULT: TRUE
+
 % PHP EXECUTEABLE
-php~disabled
+php~php
 % ex: c:\php\php.exe | /usr/local/bin/php | disable
 
 % FORCE PHP
 fphp~false
 
+% PHP.SH FILE (LINUX ONLY)
+phpsh~php.sh
+%ex: php.sh
+
+% USE PHP SH (LINUX ONLY)
+uphpsh~false
+% ex: true / false
+
 % BUILD NUMBER
-build~23
+build~26
 % DO NOT TOUCH
 
 % HOSTNAME
@@ -26,8 +38,8 @@ index~/index.html
 % DEFAULT: /index.html
 
 % ALLOWED CRASHES
-crash~-1
-% DEFAULT: 50 (-1 to disable)
+crash~2
+% DEFAULT: 2 (-1 to disable)
 
 % ALLOW DIRECTORY LIST
 dirlist~true

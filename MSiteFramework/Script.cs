@@ -77,7 +77,7 @@ namespace SimpleScript
             return ret;
         }
 
-        public static string PHPExec(string file)
+		public static string PHPExec(string file, string Post, string Get)
         {
             string ret;
             if ((!File.Exists(Program.php) && Program.fphp == false) || Program.php == "disable")
@@ -85,7 +85,7 @@ namespace SimpleScript
                 ret = "NO PHP";
             } else {
                 try {
-                    string[] test = UnsafePHP(Program.php, file);
+					string[] test = UnsafePHP(Program.php, file, Post, Get);
 					ret = test[1] + test[0];
                 } catch(Exception e) {
                     Console.WriteLine("PHP {e}",e.Message);
@@ -95,20 +95,26 @@ namespace SimpleScript
             return ret;
         }
 
-        private static string[] UnsafePHP(string php, string file)
+		private static string[] UnsafePHP(string php, string file, string Post, string Get)
         {
-            Process process = new Process();
-            string[] ret = new string[2];
-            process.StartInfo.FileName = php;
-            process.StartInfo.Arguments = "-f \"" + file + "\"";
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.RedirectStandardError = true;
-            process.Start();
-            ret[0] = process.StandardOutput.ReadToEnd();
-            ret[1] = process.StandardError.ReadToEnd();
-            process.WaitForExit();
-            return ret;
+			string[] ret = new string[2];
+			Process process = new Process ();
+
+			if (Program.uphpsh == true) {
+				process.StartInfo.FileName = "bash";
+				process.StartInfo.Arguments = Program.phpsh+" \"" + file + "\" \"" + Get + "\" \"" + Post + "\"";
+			} else {
+				process.StartInfo.FileName = php;
+				process.StartInfo.Arguments = "-f \"" + file + "\" \"" + Get + "\" \"" + Post + "\"";
+			}
+			process.StartInfo.UseShellExecute = false;
+			process.StartInfo.RedirectStandardOutput = true;
+			process.StartInfo.RedirectStandardError = true;
+			process.Start ();
+			ret [0] = process.StandardOutput.ReadToEnd ();
+			ret [1] = process.StandardError.ReadToEnd ();
+			process.WaitForExit ();
+			return ret;
 
         }
         private static string[] DLLs(string file)

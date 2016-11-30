@@ -127,7 +127,7 @@ namespace MSiteFramework
 				string url = y.Location(Program.Host);
 				string output = "", r = "";
 				try {
-				output = Script.PHPExec(url);
+					output = Script.PHPExec(url, y.post, y.get);
 				} catch (Exception e) {
 					output = "PHP ERROR";
 					r = e.Message;
@@ -137,8 +137,8 @@ namespace MSiteFramework
 					if (!(output == "PHP ERROR") && !(output == "NO PHP"))
 					{
 						x.ContentAsUTF8 = output;
-						x.StatusCode = "OK";
-						x.ReasonPhrase = "200";
+						x.StatusCode = "200";
+						x.ReasonPhrase = "OK";
 					} else {
 						x.ContentAsUTF8 = @"
                         <html>

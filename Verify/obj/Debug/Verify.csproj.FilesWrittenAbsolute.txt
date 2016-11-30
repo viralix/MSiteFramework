@@ -15,6 +15,7 @@
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/html/verify/verify.m
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/html/verify/index.html
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/config.m
+/home/mihail/Documents/MSiteFramework/Verify/bin/Debug/php.sh
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/Verify.dll.mdb
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/Verify.dll
 /home/mihail/Documents/MSiteFramework/Verify/obj/Debug/Verify.dll
