@@ -24,3 +24,4 @@
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/MSiteDLL.dll.mdb
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/SimpleHttpServer.dll
 /home/mihail/Documents/MSiteFramework/Verify/bin/Debug/log4net.dll
+/home/mihail/Documents/MSiteFramework/Verify/bin/Debug/log4net.xml

@@ -5,3 +5,4 @@
 /home/mihail/Documents/MSiteFramework/MSiteDLL/obj/Debug/MSiteDLL.dll.mdb
 /home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/SimpleHttpServer.dll
 /home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/log4net.dll
+/home/mihail/Documents/MSiteFramework/MSiteDLL/bin/Debug/log4net.xml

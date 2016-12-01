@@ -20,7 +20,7 @@ namespace MSiteFramework
         public static string Host;
         public static int Port;
         public static string name = "MSiteFramework";
-        public static string version = "1.0.0";
+        public static string version = "1.0.1";
         public static string verified = "null";
         public static int MaxCrash;
         public static string allowIndex = "true";
