@@ -49,47 +49,11 @@
     <Compile Include="Verify.cs" />
     <Compile Include="VerifyHandle.cs" />
     <Compile Include="Update.cs" />
-    <None Include="Examples\script\index.html">
-      <LogicalName>Verify.Examples.info.index.html</LogicalName>
-    </None>
-    <None Include="php.sh">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="list">
       <CustomToolNamespace>Verify</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examples\info\index.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="html\verify\handle.m">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>handle.m</LogicalName>
-    </None>
-    <EmbeddedResource Include="html\verify\verify.m">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>verify.m</LogicalName>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="html\verify\index.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>index.html</LogicalName>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="config.m">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\info\info.mc" />
-    <EmbeddedResource Include="Examples\info\info.mc.dlls" />
-    <EmbeddedResource Include="Examples\info\info.mc.inc" />
-    <EmbeddedResource Include="Examples\script\script.mc" />
-    <EmbeddedResource Include="Examples\script\script.mc.dlls" />
-    <EmbeddedResource Include="Examples\script\script.mc.inc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSiteDLL\MSiteDLL.csproj">

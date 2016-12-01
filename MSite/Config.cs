@@ -1,13 +1,13 @@
 ﻿using System;
-using MSiteDLL;
 
 namespace MSite
 {
-	public static class Config
+    public static class Config
 	{
 		public static void Cfg()
 		{
-			// Implement configuration here.
+            Console.WriteLine("Graphical configuration started...");
+            Main.Config_Click(null, null);
 		}
 	}
 }

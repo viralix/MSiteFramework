@@ -3,7 +3,7 @@ using System.IO;
 
 namespace MSiteDLL
 {
-    public class Prop 
+    public class Prop
     {
         string[] lines;
         public Prop(string path)
@@ -13,12 +13,14 @@ namespace MSiteDLL
         public string Str(string name)
         {
             string ret = "none";
-            foreach(string line in lines)
+            foreach (string line in lines)
             {
-                try {
-                   string[] i = line.Split('~');
-                   if (i[0] == name) {ret = i[1];}
-                } catch(Exception){}
+                try
+                {
+                    string[] i = line.Split('~');
+                    if (i[0] == name) { ret = i[1]; }
+                }
+                catch (Exception) { }
             }
             return ret;
         }
@@ -26,12 +28,14 @@ namespace MSiteDLL
         {
             string[] lines = File.ReadAllLines(path);
             string ret = "none";
-            foreach(string line in lines)
+            foreach (string line in lines)
             {
-                try {
-                   string[] i = line.Split('~');
-                   if (i[0] == name) {ret = i[1];}
-                } catch(Exception){}
+                try
+                {
+                    string[] i = line.Split('~');
+                    if (i[0] == name) { ret = i[1]; }
+                }
+                catch (Exception) { }
             }
             return ret;
         }
