@@ -15,10 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSite", "MSite\MSite.csproj
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Debug|x86 = Debug|x86
+
+		Debug|Any CPU = Debug|Any CPU
+  		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
-		Release|x86 = Release|x86
+ 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{52CBC114-553B-4573-934E-AA767D0B357A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
