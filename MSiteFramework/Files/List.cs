@@ -40,7 +40,7 @@ text-decoration: none;
             Element[] body = {
                 new Element("h1",  "Index of " + url),
                 new Element("div", x.Replace(loc, "")),
-                new Element("h4", Program.name + " v" + Program.version),
+				new Element("h4", Program.name + " v" + Program.version),
             };
 
             Block[] blocks = {

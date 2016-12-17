@@ -4,11 +4,13 @@ using System.Threading;
 using MSiteDLL;
 using Secure.Verify;
 using System.IO;
+using MDatabase;
 
 namespace MSiteFramework
 {
     public static class Program
     {
+		static bool initdb = false;
 		public static bool cupdate;
 		public static bool uphpsh;
 		public static string phpsh;
@@ -24,8 +26,11 @@ namespace MSiteFramework
         public static string verified = "null";
         public static int MaxCrash;
         public static string allowIndex = "true";
-
-        public static void Main(string[] args)
+        public static string dbpath = "db/data";
+        public static int dbsleep = 600000;
+        public static Database db = new Database();
+		private static string savejob = "null";
+        public static void Main()
         {
             fphp = false;
             php = "disable";
@@ -45,11 +50,6 @@ namespace MSiteFramework
             {
                 verified = File.ReadAllText("verified");
             } catch (Exception){}
-
-            try
-            {
-                file = args[0];
-            } catch (Exception) {}
             Console.Title =  name+" Server"+lc(verified, version);
             try
             {
@@ -65,6 +65,8 @@ namespace MSiteFramework
 				uphpsh = bool.Parse(Prop.Get(file, "uphpsh"));
 				phpsh = Prop.Get(file, "phpsh");
 				cupdate = bool.Parse(Prop.Get(file, "cupdate"));
+				dbpath = Prop.Get(file, "dbpath");
+				dbsleep = int.Parse(Prop.Get(file, "dbsleep"));
 
             } catch (Exception e) {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -105,10 +107,57 @@ namespace MSiteFramework
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Listening on port {0}...", Port);
             Console.ResetColor();
+            Thread th = new Thread(new ThreadStart(__dbs));
             Thread thread = new Thread(new ThreadStart(StartServer));
+            th.Start();
             thread.Start();
         }
 
+		public static void save()
+		{
+			savejob = "save";
+		}
+		static private void __fload()
+		{
+			db = Format.Load(dbpath);
+			initdb = true;
+		}
+
+		static private void __fsave()
+		{
+			Format.Save(db, dbpath);
+			__fload ();
+		}
+
+        private static void __dbs()
+        {
+			if (File.Exists (dbpath)) {
+				__fload ();
+			}
+            while(true) 
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Saving database...");
+                Console.ResetColor();
+				__fsave();
+                try {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Database saved!");
+                Console.ResetColor();
+                } catch (Exception e) {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Database saving error:", e.Message);
+                Console.ResetColor();
+                }
+				savejob = "null";
+				int t = 0, s = 0;
+				while ((savejob != "save") && (t < 100)) {
+					Thread.Sleep(100);
+					s += 100;
+					t = (int)((float)((float)s/(float)dbsleep) * (float)100);
+				}
+            }
+        }
         private static string lc(string verified, string version)
         {
             if (verified.ToLower() == "true")
@@ -122,7 +171,21 @@ namespace MSiteFramework
 
         public static void StartServer()
         {
-            int i = 0;
+			while (!initdb) {
+				Thread.Sleep (100);
+			}
+            if(!db.table.ContainsKey("session"))
+            {
+                db.table.Add("session", new Table());
+            }
+			if (!db.table ["session"].key.ContainsKey ("now")) {
+				db.table ["session"].key.Add ("now", DateTime.Now.ToString ());
+			} else {
+				Console.WriteLine("Last started on: {0}", db.table["session"].key ["now"]);
+				db.table ["session"].key["now"] = DateTime.Now.ToString ();
+			}
+			save ();
+			int i = 0;
             HttpServer httpServer = new HttpServer(Port, Routes.GET);
             Start:
             if((i>=MaxCrash) && (MaxCrash!=-1))
@@ -132,7 +195,6 @@ namespace MSiteFramework
                 Console.WriteLine("Crashed the maximal amount of times allowed ({1}/{0}).", MaxCrash, i);
                 Console.WriteLine("Set the crash parameter to -1 in the configuration file to disable this feature.");
                 Console.ResetColor();
-                Console.ReadKey(true);
                 return;
             }
             i++;

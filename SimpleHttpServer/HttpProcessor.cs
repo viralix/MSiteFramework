@@ -1,11 +1,11 @@
 ﻿// Copyright (C) 2016 by David Jeske, Barend Erasmus and donated to the public domain
 
-using log4net;
 using SimpleHttpServer.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -19,8 +19,6 @@ namespace SimpleHttpServer
         #region Fields
 
         private List<Route> Routes = new List<Route>();
-
-        private static readonly ILog log = LogManager.GetLogger(typeof(HttpProcessor));
 
         #endregion
 
@@ -37,11 +35,11 @@ namespace SimpleHttpServer
         {
                 Stream inputStream = GetInputStream(tcpClient);
                 Stream outputStream = GetOutputStream(tcpClient);
+			string IP = ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString();
                 HttpRequest request = GetRequest(inputStream, outputStream);
-
-                // route and handle the request...
-                HttpResponse response = RouteRequest(inputStream, outputStream, request);
-
+			request.IP = IP;
+            // route and handle the request...
+            HttpResponse response = RouteRequest(inputStream, outputStream, request);
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.Write("["+response.StatusCode+"] ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -132,7 +130,7 @@ namespace SimpleHttpServer
             return tcpClient.GetStream();
         }
 
-        protected virtual HttpResponse RouteRequest(Stream inputStream, Stream outputStream, HttpRequest request)
+		protected virtual HttpResponse RouteRequest(Stream inputStream, Stream outputStream, HttpRequest request)
         {
 
             List<Route> routes = this.Routes.Where(x => Regex.Match(request.Url, x.UrlRegex).Success).ToList();
@@ -147,7 +145,6 @@ namespace SimpleHttpServer
                 {
                     ReasonPhrase = "Method Not Allowed",
                     StatusCode = "405",
-
                 };
 
             // extract the path if there is one
@@ -163,7 +160,9 @@ namespace SimpleHttpServer
             try {
                 return route.Callable(request);
             } catch(Exception ex) {
-                log.Error(ex);
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.WriteLine(ex.Message);
+				Console.ResetColor ();
                 return HttpBuilder.InternalServerError();
             }
 

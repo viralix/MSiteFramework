@@ -22,7 +22,7 @@ uphpsh~false
 % ex: true / false
 
 % BUILD NUMBER
-build~35
+build~37
 % DO NOT TOUCH
 
 % HOSTNAME
@@ -44,3 +44,9 @@ crash~2
 % ALLOW DIRECTORY LIST
 dirlist~true
 % DEFAULT: FALSE
+
+% PATH TO THE DATABASE
+dbpath~db/data
+
+% SAVE EVERY
+dbsleep~600000

@@ -44,7 +44,7 @@ namespace MSite
 
         private void srv()
         {
-            Program.Main(args);
+            Program.Main();
         }
 
         public static void Config_Click(object sender, EventArgs e)

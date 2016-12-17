@@ -68,6 +68,10 @@
       <Project>{FD3E0079-0FD8-4B03-B363-33E57B5271EB}</Project>
       <Name>Verify</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MDatabase\MDatabase.csproj">
+      <Project>{F4B3441F-0FB0-4606-806E-A54243123248}</Project>
+      <Name>MDatabase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

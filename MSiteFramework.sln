@@ -1,5 +1,6 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio 2012
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSiteFramework", "MSiteFramework\MSiteFramework.csproj", "{52CBC114-553B-4573-934E-AA767D0B357A}"
@@ -12,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpServer", "SimpleH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSite", "MSite\MSite.csproj", "{AF74326B-210B-4465-AD15-54CA98B2E62D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDatabase", "MDatabase\MDatabase.csproj", "{F4B3441F-0FB0-4606-806E-A54243123248}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -22,14 +25,6 @@ Global
 		{52CBC114-553B-4573-934E-AA767D0B357A}.Debug|x86.Build.0 = Debug|Any CPU
 		{52CBC114-553B-4573-934E-AA767D0B357A}.Release|x86.ActiveCfg = Release|Any CPU
 		{52CBC114-553B-4573-934E-AA767D0B357A}.Release|x86.Build.0 = Release|Any CPU
-		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Debug|x86.Build.0 = Debug|Any CPU
-		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Release|x86.ActiveCfg = Release|Any CPU
-		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Release|x86.Build.0 = Release|Any CPU
-		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Debug|x86.Build.0 = Debug|Any CPU
-		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Release|x86.ActiveCfg = Release|Any CPU
-		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Release|x86.Build.0 = Release|Any CPU
 		{9E139539-C272-488A-BFCF-CADDF458DF9D}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{9E139539-C272-488A-BFCF-CADDF458DF9D}.Debug|x86.Build.0 = Debug|Any CPU
 		{9E139539-C272-488A-BFCF-CADDF458DF9D}.Release|x86.ActiveCfg = Release|x86
@@ -38,14 +33,26 @@ Global
 		{AF74326B-210B-4465-AD15-54CA98B2E62D}.Debug|x86.Build.0 = Debug|Any CPU
 		{AF74326B-210B-4465-AD15-54CA98B2E62D}.Release|x86.ActiveCfg = Release|Any CPU
 		{AF74326B-210B-4465-AD15-54CA98B2E62D}.Release|x86.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Debug|x86.Build.0 = Debug|Any CPU
+		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Release|x86.ActiveCfg = Release|Any CPU
+		{E9587C14-25B1-487B-9984-30ABF3A4230D}.Release|x86.Build.0 = Release|Any CPU
+		{F4B3441F-0FB0-4606-806E-A54243123248}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4B3441F-0FB0-4606-806E-A54243123248}.Debug|x86.Build.0 = Debug|Any CPU
+		{F4B3441F-0FB0-4606-806E-A54243123248}.Release|x86.ActiveCfg = Release|Any CPU
+		{F4B3441F-0FB0-4606-806E-A54243123248}.Release|x86.Build.0 = Release|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Debug|x86.Build.0 = Debug|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD3E0079-0FD8-4B03-B363-33E57B5271EB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
 		$1.ResourceNamePolicy = FileFormatDefault
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

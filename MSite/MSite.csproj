@@ -19,6 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
+    <Commandlineparameters>no-gui</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -92,6 +93,9 @@
     <None Include="php.sh">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="db\dbfolder">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="html\verify\verify.m">
@@ -106,5 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\info\info.mc.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="db\" />
   </ItemGroup>
 </Project>

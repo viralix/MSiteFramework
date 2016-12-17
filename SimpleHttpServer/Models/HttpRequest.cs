@@ -15,6 +15,7 @@ namespace SimpleHttpServer.Models
         public string Content { get; set; }
         public Route Route { get; set; }
         public Dictionary<string, string> Headers { get; set; }
+		public string IP { get; set; }
 
         public HttpRequest()
         {

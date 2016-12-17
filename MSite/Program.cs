@@ -28,7 +28,7 @@ namespace MSite
                 {
                     try
                     {
-                        Program.Main(args);
+                        Program.Main();
                     }
                     catch (Exception e)
                     {
