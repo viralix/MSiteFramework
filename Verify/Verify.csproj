@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Info.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="verified">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -49,6 +48,7 @@
     <Compile Include="Verify.cs" />
     <Compile Include="VerifyHandle.cs" />
     <Compile Include="Update.cs" />
+    <Compile Include="Info.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="list">

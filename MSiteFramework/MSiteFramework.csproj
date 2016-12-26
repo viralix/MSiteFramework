@@ -43,14 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Files\Class.cs" />
-    <Compile Include="Files\Error.cs" />
-    <Compile Include="Files\List.cs" />
-    <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Routes.cs" />
     <Compile Include="Framework.cs" />
-    <Compile Include="Script.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="LoadSite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

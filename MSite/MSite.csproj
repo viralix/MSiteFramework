@@ -64,6 +64,18 @@
       <Project>{E9587C14-25B1-487B-9984-30ABF3A4230D}</Project>
       <Name>MSiteDLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MySite\MySite.csproj">
+      <Project>{33A9381F-5F5D-4605-9423-875956388720}</Project>
+      <Name>MySite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mse1_0\mse1_0.csproj">
+      <Project>{52258EB0-5A65-4C98-9EBA-DC0FFD3E9C2B}</Project>
+      <Name>mse1_0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mse2_0\mse2_0.csproj">
+      <Project>{0167FAFA-6717-4889-A111-9BD8E00132A1}</Project>
+      <Name>mse2_0</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Configu.resx">

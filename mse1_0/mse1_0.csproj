@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52258EB0-5A65-4C98-9EBA-DC0FFD3E9C2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>mse1_0</RootNamespace>
+    <AssemblyName>mse1_0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Routes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script.cs" />
+    <Compile Include="Files\Class.cs" />
+    <Compile Include="Files\Error.cs" />
+    <Compile Include="Files\List.cs" />
+    <Compile Include="Parser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MDatabase\MDatabase.csproj">
+      <Project>{F4B3441F-0FB0-4606-806E-A54243123248}</Project>
+      <Name>MDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSiteDLL\MSiteDLL.csproj">
+      <Project>{E9587C14-25B1-487B-9984-30ABF3A4230D}</Project>
+      <Name>MSiteDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSiteFramework\MSiteFramework.csproj">
+      <Project>{52CBC114-553B-4573-934E-AA767D0B357A}</Project>
+      <Name>MSiteFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
+      <Project>{9E139539-C272-488A-BFCF-CADDF458DF9D}</Project>
+      <Name>SimpleHttpServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Verify\Verify.csproj">
+      <Project>{FD3E0079-0FD8-4B03-B363-33E57B5271EB}</Project>
+      <Name>Verify</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

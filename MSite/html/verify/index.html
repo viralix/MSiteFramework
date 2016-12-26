@@ -2,7 +2,21 @@
 <head>
     <script>
         function onLoad() {
-            var host = "verify.m?host=" + window.location.hostname;
+var load = new XMLHttpRequest();
+load.open('GET', '/engine');
+load.onreadystatechange = function() {
+  if (load.responseText == "mse1_0")
+			{
+				els();
+			} else {
+				document.body.innerHTML = "Non supported engine, please use 'mse1_0.dll'.";
+			}
+}
+load.send();
+        }
+			function els()
+			{
+			            var host = "verify.m?host=" + window.location.hostname;
             var xmlhttp;
             if (window.XMLHttpRequest) {
                 xmlhttp = new XMLHttpRequest();
@@ -27,7 +41,8 @@
             }
             xmlhttp.open("GET", host, true);
             xmlhttp.send();
-        }
+
+			}
     </script>
     <title>Verify</title>
 </head>
