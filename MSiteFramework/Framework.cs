@@ -48,8 +48,6 @@ namespace MSiteFramework
 			uphpsh = false;
 			phpsh = "php.sh";
 			cupdate = true;
-			// Add the build number
-			version += "." + Build;
 			// Default Engine
 			engine = "mse1_0.dll";
 			try
@@ -83,6 +81,8 @@ namespace MSiteFramework
 			cupdate = bool.Parse(Prop.Get(file, "cupdate"));
 			dbpath = Prop.Get(file, "dbpath");
 			dbsleep = int.Parse(Prop.Get(file, "dbsleep"));
+			// Add the build number
+			version += "." + Build;
 		}
 
         public static void Main()
