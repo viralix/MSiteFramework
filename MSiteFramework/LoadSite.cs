@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using SimpleHttpServer;
 using System.Reflection;
+using System.IO;
 
 namespace MSiteFramework
 {
@@ -9,7 +10,7 @@ namespace MSiteFramework
 		dynamic site = null;
 		public LoadSite(string dll)
 		{
-			Assembly DLL = Assembly.LoadFile(dll);
+			Assembly DLL = Assembly.LoadFile(Directory.GetCurrentDirectory() + @"/" + dll);
 			foreach (Type type in DLL.GetExportedTypes())
 			{
 				if (type.Name == "Routes")
