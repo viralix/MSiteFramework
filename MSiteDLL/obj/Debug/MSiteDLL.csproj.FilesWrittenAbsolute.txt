@@ -1,0 +1,6 @@
+/home/mihail/MSiteFramework/MSiteDLL/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/MSiteFramework/MSiteDLL/bin/Debug/MSiteDLL.dll.mdb
+/home/mihail/MSiteFramework/MSiteDLL/bin/Debug/MSiteDLL.dll
+/home/mihail/MSiteFramework/MSiteDLL/obj/Debug/MSiteDLL.dll
+/home/mihail/MSiteFramework/MSiteDLL/obj/Debug/MSiteDLL.dll.mdb
+/home/mihail/MSiteFramework/MSiteDLL/bin/Debug/SimpleHttpServer.dll

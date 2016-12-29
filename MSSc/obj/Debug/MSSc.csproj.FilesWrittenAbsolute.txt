@@ -1,0 +1,15 @@
+/home/mihail/Projects/MSSc/MSSc/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/Projects/MSSc/MSSc/bin/Debug/MSSc.dll.mdb
+/home/mihail/Projects/MSSc/MSSc/bin/Debug/MSSc.dll
+/home/mihail/Projects/MSSc/MSSc/obj/Debug/MSSc.dll
+/home/mihail/Projects/MSSc/MSSc/obj/Debug/MSSc.dll.mdb
+/home/mihail/Projects/MSSc/MSSc/bin/Debug/MDatabase.dll
+/home/mihail/Projects/MSSc/MSSc/bin/Debug/MDatabase.dll.mdb
+/home/mihail/MSiteFramework/MSSc/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/MSiteFramework/MSSc/bin/Debug/MSSc.dll.mdb
+/home/mihail/MSiteFramework/MSSc/bin/Debug/MSSc.dll
+/home/mihail/MSiteFramework/MSSc/obj/Debug/MSSc.dll
+/home/mihail/MSiteFramework/MSSc/obj/Debug/MSSc.dll.mdb
+/home/mihail/MSiteFramework/MSSc/bin/Debug/SimpleHttpServer.dll
+/home/mihail/MSiteFramework/MSSc/bin/Debug/MSiteDLL.dll
+/home/mihail/MSiteFramework/MSSc/bin/Debug/MSiteDLL.dll.mdb

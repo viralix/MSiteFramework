@@ -1,0 +1,15 @@
+/home/mihail/MSiteFramework/MySite/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/MSiteFramework/MySite/bin/Debug/verified
+/home/mihail/MSiteFramework/MySite/bin/Debug/MySite.dll.mdb
+/home/mihail/MSiteFramework/MySite/bin/Debug/MySite.dll
+/home/mihail/MSiteFramework/MySite/obj/Debug/MySite.dll
+/home/mihail/MSiteFramework/MySite/obj/Debug/MySite.dll.mdb
+/home/mihail/MSiteFramework/MySite/bin/Debug/SimpleHttpServer.dll
+/home/mihail/MSiteFramework/MySite/bin/Debug/MDatabase.dll
+/home/mihail/MSiteFramework/MySite/bin/Debug/MDatabase.dll.mdb
+/home/mihail/MSiteFramework/MySite/bin/Debug/MSiteDLL.dll
+/home/mihail/MSiteFramework/MySite/bin/Debug/MSiteDLL.dll.mdb
+/home/mihail/MSiteFramework/MySite/bin/Debug/MSiteFramework.dll
+/home/mihail/MSiteFramework/MySite/bin/Debug/MSiteFramework.dll.mdb
+/home/mihail/MSiteFramework/MySite/bin/Debug/Verify.dll
+/home/mihail/MSiteFramework/MySite/bin/Debug/Verify.dll.mdb

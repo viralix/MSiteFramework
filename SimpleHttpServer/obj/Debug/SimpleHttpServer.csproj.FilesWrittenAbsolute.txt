@@ -1,0 +1,3 @@
+/home/mihail/MSiteFramework/SimpleHttpServer/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/MSiteFramework/SimpleHttpServer/bin/Debug/SimpleHttpServer.dll
+/home/mihail/MSiteFramework/SimpleHttpServer/obj/Debug/SimpleHttpServer.dll

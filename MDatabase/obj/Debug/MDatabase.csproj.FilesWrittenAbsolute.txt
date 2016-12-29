@@ -1,0 +1,5 @@
+/home/mihail/MSiteFramework/MDatabase/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mihail/MSiteFramework/MDatabase/bin/Debug/MDatabase.dll.mdb
+/home/mihail/MSiteFramework/MDatabase/bin/Debug/MDatabase.dll
+/home/mihail/MSiteFramework/MDatabase/obj/Debug/MDatabase.dll
+/home/mihail/MSiteFramework/MDatabase/obj/Debug/MDatabase.dll.mdb
