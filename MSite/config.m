@@ -1,6 +1,6 @@
 % ENGINE
 engine~mse2_0.dll
-% DEFAULT: mse1_0.dll
+% DEFAULT: mse2_0.dll
 
 % HTML FOLDER LOCATION
 html~html
@@ -26,7 +26,7 @@ uphpsh~false
 % ex: true / false
 
 % BUILD NUMBER
-build~39
+build~49
 % DO NOT TOUCH
 
 % HOSTNAME
