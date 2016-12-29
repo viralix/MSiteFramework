@@ -39,7 +39,7 @@
     <Compile Include="Commands\Var.cs" />
     <Compile Include="Commands\In.cs" />
     <Compile Include="Commands\Math.cs" />
-    <Compile Include="Commands\Con.cs" />
+    <Compile Include="Commands\Console.cs" />
     <Compile Include="Commands\Api.cs" />
   </ItemGroup>
   <ItemGroup>
