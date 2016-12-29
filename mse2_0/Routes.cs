@@ -38,7 +38,7 @@ namespace mse2_0
 			HttpResponse response = new HttpResponse();
 			try
 			{
-				response.Headers["Content-Type"] = SimpleHttpServer.RouteHandlers.QuickMimeTypeMapper.GetMimeType(request.Url.Split('.')[1]);
+				response.Headers["Content-Type"] = SimpleHttpServer.RouteHandlers.QuickMimeTypeMapper.GetMimeType(request.Url.Split('?')[0].Split('.')[request.Url.Split('?')[0].Split('.').Length - 1]);
 			}
 			catch (Exception)
 			{
