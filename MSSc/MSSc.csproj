@@ -43,7 +43,7 @@
     <Compile Include="Commands\Api.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MSiteFramework\MDatabase\MDatabase.csproj">
+    <ProjectReference Include="..\MSiteFramework\MDatabase\MDatabase.csproj">
       <Project>{F4B3441F-0FB0-4606-806E-A54243123248}</Project>
       <Name>MDatabase</Name>
     </ProjectReference>
