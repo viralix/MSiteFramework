@@ -51,6 +51,10 @@
       <Project>{9E139539-C272-488A-BFCF-CADDF458DF9D}</Project>
       <Name>SimpleHttpServer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MSSc\MSSc.csproj">
+      <Project>{C94C5D29-3833-4F53-904B-0E43C287ACD1}</Project>
+      <Name>MSSc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
