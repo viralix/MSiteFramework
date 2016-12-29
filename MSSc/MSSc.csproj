@@ -43,10 +43,6 @@
     <Compile Include="Commands\Api.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MSiteFramework\MDatabase\MDatabase.csproj">
-      <Project>{F4B3441F-0FB0-4606-806E-A54243123248}</Project>
-      <Name>MDatabase</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
       <Project>{9E139539-C272-488A-BFCF-CADDF458DF9D}</Project>
       <Name>SimpleHttpServer</Name>
