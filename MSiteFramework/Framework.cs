@@ -155,16 +155,8 @@ namespace MSiteFramework
 			}
 
 			// Check for last session and print it out.
-            if(!Server.db.table.ContainsKey("session"))
-            {
-                Server.db.table.Add("session", new Table());
-            }
-			if (!Server.db.table ["session"].key.ContainsKey ("now")) {
-				Server.db.table ["session"].key.Add ("now", DateTime.Now.ToString ());
-			} else {
-				Console.WriteLine("Last started on: {0}", Server.db.table["session"].key ["now"]);
-				Server.db.table ["session"].key["now"] = DateTime.Now.ToString ();
-			}
+			Console.WriteLine("Last session: {0}", Server.db.Get("session").Get("now"));
+			Server.db.Get("session").Set("now",DateTime.Now.ToString());
 
 			// Save the current session.
 			Server.save ();

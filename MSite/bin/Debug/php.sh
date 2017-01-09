@@ -1,1 +1,0 @@
-﻿echo "" | php -R 'include("'$1'");' -B 'parse_str($argv[1], $_GET);pasrse_str($argv[2], $_POST);' "$2" "$3"
