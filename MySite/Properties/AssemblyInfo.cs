@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("MySite")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MixSoft Programming, d.o.o.")]
+[assembly: AssemblyCompany("Mihail Mojsoski")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Mihail Mojsoski")]
 [assembly: AssemblyTrademark("MSiteFramework")]
