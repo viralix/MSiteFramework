@@ -1,0 +1,14 @@
+/home/viral/MSiteFramework/MSiteFramework/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/verified
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MSiteFramework.dll.config
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MSiteFramework.dll.mdb
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MSiteFramework.dll
+/home/viral/MSiteFramework/MSiteFramework/obj/Debug/MSiteFramework.dll
+/home/viral/MSiteFramework/MSiteFramework/obj/Debug/MSiteFramework.dll.mdb
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MSiteDLL.dll
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MSiteDLL.dll.mdb
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/SimpleHttpServer.dll
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/Verify.dll
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/Verify.dll.mdb
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MDatabase.dll
+/home/viral/MSiteFramework/MSiteFramework/bin/Debug/MDatabase.dll.mdb

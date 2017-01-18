@@ -1,0 +1,3 @@
+/home/viral/MSiteFramework/SimpleHttpServer/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/viral/MSiteFramework/SimpleHttpServer/bin/Debug/SimpleHttpServer.dll
+/home/viral/MSiteFramework/SimpleHttpServer/obj/Debug/SimpleHttpServer.dll

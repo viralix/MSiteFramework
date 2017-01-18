@@ -1,13 +1,9 @@
-﻿<Properties StartupConfiguration="{AF74326B-210B-4465-AD15-54CA98B2E62D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MSiteFramework Status">
-    <Files>
-      <File FileName="MSiteFramework Status" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Core.MSite PreferredExecutionTarget="MonoDevelop.Default" />
+﻿<Properties StartupConfiguration="{AF74326B-210B-4465-AD15-54CA98B2E62D}|Default" StartupItem="MSite/MSite.csproj">
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Core.MSite PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

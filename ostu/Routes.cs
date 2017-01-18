@@ -33,11 +33,16 @@ namespace ostu
 
 		public HttpResponse Handle(HttpRequest request)
 		{
-			
+			Language lang = new Language ("English");
+			lang.Strings = new List<string> {
+				"O.S.Т.U Gostivar",
+				"Welcome to our web site",
+			};
 			return new HttpResponse()
 			{
-				ContentAsUTF8 = "<h1>Zdravo, Svetu!</h1>",
+				ContentAsUTF8 = lang.Strings[1],
 				// Your own response
+
 			};
 		}
 	}

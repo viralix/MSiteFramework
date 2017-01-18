@@ -76,6 +76,10 @@
       <Project>{0167FAFA-6717-4889-A111-9BD8E00132A1}</Project>
       <Name>mse2_0</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ostu\ostu.csproj">
+      <Project>{86D480E2-52AD-4B77-8331-2EA63378610E}</Project>
+      <Name>ostu</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Configu.resx">

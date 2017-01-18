@@ -1,0 +1,15 @@
+engine~ostu.dll
+html~html
+cupdate~true
+php~php
+fphp~false
+phpsh~php.sh
+uphpsh~false
+build~49
+hostname~localhost
+port~80
+index~/index.html
+crash~2
+dirlist~true
+dbpath~db/data
+dbsleep~600000

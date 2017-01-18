@@ -1,0 +1,8 @@
+/home/viral/MSiteFramework/MSSc/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/viral/MSiteFramework/MSSc/bin/Debug/MSSc.dll.mdb
+/home/viral/MSiteFramework/MSSc/bin/Debug/MSSc.dll
+/home/viral/MSiteFramework/MSSc/obj/Debug/MSSc.dll
+/home/viral/MSiteFramework/MSSc/obj/Debug/MSSc.dll.mdb
+/home/viral/MSiteFramework/MSSc/bin/Debug/SimpleHttpServer.dll
+/home/viral/MSiteFramework/MSSc/bin/Debug/MSiteDLL.dll
+/home/viral/MSiteFramework/MSSc/bin/Debug/MSiteDLL.dll.mdb

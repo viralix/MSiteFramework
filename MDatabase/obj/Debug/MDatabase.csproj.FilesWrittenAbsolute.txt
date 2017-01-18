@@ -1,0 +1,5 @@
+/home/viral/MSiteFramework/MDatabase/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/viral/MSiteFramework/MDatabase/bin/Debug/MDatabase.dll.mdb
+/home/viral/MSiteFramework/MDatabase/bin/Debug/MDatabase.dll
+/home/viral/MSiteFramework/MDatabase/obj/Debug/MDatabase.dll
+/home/viral/MSiteFramework/MDatabase/obj/Debug/MDatabase.dll.mdb
