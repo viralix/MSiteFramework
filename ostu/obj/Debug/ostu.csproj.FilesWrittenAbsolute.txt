@@ -1,0 +1,15 @@
+/home/viral/MSiteFramework/ostu/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/viral/MSiteFramework/ostu/bin/Debug/verified
+/home/viral/MSiteFramework/ostu/bin/Debug/ostu.dll.mdb
+/home/viral/MSiteFramework/ostu/bin/Debug/ostu.dll
+/home/viral/MSiteFramework/ostu/obj/Debug/ostu.dll
+/home/viral/MSiteFramework/ostu/obj/Debug/ostu.dll.mdb
+/home/viral/MSiteFramework/ostu/bin/Debug/SimpleHttpServer.dll
+/home/viral/MSiteFramework/ostu/bin/Debug/MSiteDLL.dll
+/home/viral/MSiteFramework/ostu/bin/Debug/MSiteDLL.dll.mdb
+/home/viral/MSiteFramework/ostu/bin/Debug/MSiteFramework.dll
+/home/viral/MSiteFramework/ostu/bin/Debug/MSiteFramework.dll.mdb
+/home/viral/MSiteFramework/ostu/bin/Debug/MDatabase.dll
+/home/viral/MSiteFramework/ostu/bin/Debug/MDatabase.dll.mdb
+/home/viral/MSiteFramework/ostu/bin/Debug/Verify.dll
+/home/viral/MSiteFramework/ostu/bin/Debug/Verify.dll.mdb
