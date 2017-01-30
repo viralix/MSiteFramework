@@ -1,0 +1,10 @@
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\verified
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\Verify.dll
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\Verify.pdb
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\MSiteDLL.dll
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\MSiteDLL.pdb
+C:\Users\crack\Desktop\MSiteFramework\Verify\bin\Debug\SimpleHttpServer.pdb
+C:\Users\crack\Desktop\MSiteFramework\Verify\obj\Debug\Verify.csprojResolveAssemblyReference.cache
+C:\Users\crack\Desktop\MSiteFramework\Verify\obj\Debug\Verify.dll
+C:\Users\crack\Desktop\MSiteFramework\Verify\obj\Debug\Verify.pdb

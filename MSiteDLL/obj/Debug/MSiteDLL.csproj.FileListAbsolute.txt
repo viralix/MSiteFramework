@@ -1,0 +1,7 @@
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\bin\Debug\MSiteDLL.dll
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\bin\Debug\MSiteDLL.pdb
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\bin\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\bin\Debug\SimpleHttpServer.pdb
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\obj\Debug\MSiteDLL.csprojResolveAssemblyReference.cache
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\obj\Debug\MSiteDLL.dll
+C:\Users\crack\Desktop\MSiteFramework\MSiteDLL\obj\Debug\MSiteDLL.pdb

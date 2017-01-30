@@ -1,0 +1,4 @@
+C:\Users\crack\Desktop\MSiteFramework\MDatabase\bin\Debug\MDatabase.dll
+C:\Users\crack\Desktop\MSiteFramework\MDatabase\bin\Debug\MDatabase.pdb
+C:\Users\crack\Desktop\MSiteFramework\MDatabase\obj\Debug\MDatabase.dll
+C:\Users\crack\Desktop\MSiteFramework\MDatabase\obj\Debug\MDatabase.pdb

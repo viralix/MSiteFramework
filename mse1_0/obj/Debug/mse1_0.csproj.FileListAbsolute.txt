@@ -1,0 +1,16 @@
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\verified
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\mse1_0.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\mse1_0.pdb
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\MDatabase.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\MSiteDLL.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\MSiteFramework.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\Verify.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\MDatabase.pdb
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\MSiteDLL.pdb
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\MSiteFramework.pdb
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\SimpleHttpServer.pdb
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\bin\Debug\Verify.pdb
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\obj\Debug\mse1_0.csprojResolveAssemblyReference.cache
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\obj\Debug\mse1_0.dll
+C:\Users\crack\Desktop\MSiteFramework\mse1_0\obj\Debug\mse1_0.pdb

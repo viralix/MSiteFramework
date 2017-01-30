@@ -6,9 +6,10 @@ namespace ostu
 	{
 		public string Name;
 		public List<string> Strings;
-		public Language (string name)
+
+        public Language (string name, string[] lang)
 		{
-			Strings = new List<string> ();
+			Strings = new List<string> (lang);
 			Name = name;
 		}
 	}

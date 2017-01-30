@@ -1,0 +1,9 @@
+C:\Users\crack\Desktop\MSiteFramework\MSSc\bin\Debug\MSSc.dll
+C:\Users\crack\Desktop\MSiteFramework\MSSc\bin\Debug\MSSc.pdb
+C:\Users\crack\Desktop\MSiteFramework\MSSc\bin\Debug\MSiteDLL.dll
+C:\Users\crack\Desktop\MSiteFramework\MSSc\bin\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\MSSc\bin\Debug\SimpleHttpServer.pdb
+C:\Users\crack\Desktop\MSiteFramework\MSSc\bin\Debug\MSiteDLL.pdb
+C:\Users\crack\Desktop\MSiteFramework\MSSc\obj\Debug\MSSc.csprojResolveAssemblyReference.cache
+C:\Users\crack\Desktop\MSiteFramework\MSSc\obj\Debug\MSSc.dll
+C:\Users\crack\Desktop\MSiteFramework\MSSc\obj\Debug\MSSc.pdb

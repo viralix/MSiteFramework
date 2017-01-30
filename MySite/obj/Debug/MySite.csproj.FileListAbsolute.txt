@@ -1,0 +1,16 @@
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\verified
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MySite.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MySite.pdb
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MDatabase.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MSiteDLL.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MSiteFramework.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\Verify.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\SimpleHttpServer.pdb
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MDatabase.pdb
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MSiteDLL.pdb
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\MSiteFramework.pdb
+C:\Users\crack\Desktop\MSiteFramework\MySite\bin\Debug\Verify.pdb
+C:\Users\crack\Desktop\MSiteFramework\MySite\obj\Debug\MySite.csprojResolveAssemblyReference.cache
+C:\Users\crack\Desktop\MSiteFramework\MySite\obj\Debug\MySite.dll
+C:\Users\crack\Desktop\MSiteFramework\MySite\obj\Debug\MySite.pdb

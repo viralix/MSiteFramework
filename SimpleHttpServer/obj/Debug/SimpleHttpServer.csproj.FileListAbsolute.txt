@@ -1,0 +1,5 @@
+C:\Users\crack\Desktop\MSiteFramework\SimpleHttpServer\bin\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\SimpleHttpServer\bin\Debug\SimpleHttpServer.pdb
+C:\Users\crack\Desktop\MSiteFramework\SimpleHttpServer\obj\Debug\SimpleHttpServer.csprojResolveAssemblyReference.cache
+C:\Users\crack\Desktop\MSiteFramework\SimpleHttpServer\obj\Debug\SimpleHttpServer.dll
+C:\Users\crack\Desktop\MSiteFramework\SimpleHttpServer\obj\Debug\SimpleHttpServer.pdb

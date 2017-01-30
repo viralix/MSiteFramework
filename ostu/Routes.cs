@@ -1,4 +1,5 @@
 ﻿using SimpleHttpServer.Models;
+using ostu.Languages;
 using System.Collections.Generic;
 namespace ostu
 {
@@ -33,17 +34,8 @@ namespace ostu
 
 		public HttpResponse Handle(HttpRequest request)
 		{
-			Language lang = new Language ("English");
-			lang.Strings = new List<string> {
-				"O.S.Т.U Gostivar",
-				"Welcome to our web site",
-			};
-			return new HttpResponse()
-			{
-				ContentAsUTF8 = lang.Strings[1],
-				// Your own response
-
-			};
+			Language lang = new English();
+            return new Site(lang, request).Response();
 		}
 	}
 
